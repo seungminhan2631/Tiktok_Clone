@@ -30,6 +30,7 @@ linter:
 analyzer:
   errors:
     avoid_print: ignore
+    avoid_unnecessary_containers: ignore
     deprecated_member_use: ignore
     empty_constructor_bodies: ignore
     file_names: ignore
