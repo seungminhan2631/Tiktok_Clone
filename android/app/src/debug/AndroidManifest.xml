@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tiktok_clone"> <!-- 패키지 이름 추가 -->
+
+    <!-- 앱이 네트워크에 액세스할 수 있도록 인터넷 권한 추가 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>

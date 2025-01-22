@@ -1,0 +1,41 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // Flutter Gradle Plugin은 Android 및 Kotlin Gradle Plugin 뒤에 적용해야 합니다.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.example.tiktok_clone" // Namespace 추가
+    compileSdk 34 // 최신 Android SDK
+
+    defaultConfig {
+        applicationId "com.example.tiktok_clone" // 앱 고유 ID (namespace와 동일)
+        minSdk 21  // 최소 지원 SDK 버전
+        targetSdk 34  // 목표 SDK 버전
+        versionCode 1 // 앱 버전 코드
+        versionName "1.0" // 앱 버전 이름
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17 // Java 17 사용
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // Kotlin JVM 타겟도 17로 설정
+    }
+
+    buildTypes {
+        release {
+            // 릴리스 모드 설정
+            shrinkResources false // 리소스 축소 비활성화
+            minifyEnabled false // 코드 난독화 비활성화
+            signingConfig signingConfigs.debug // 디버그 키 사용 (배포 시 릴리스 키로 변경 필요)
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Flutter 프로젝트 경로
+}

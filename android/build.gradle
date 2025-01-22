@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        google() // Google Maven Repository
+        mavenCentral() // 중앙 Maven Repository
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1' // 최신 AGP 버전
+    }
+}
+
+// 모든 서브 프로젝트에서 공통적으로 적용되는 설정
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// root 프로젝트 빌드 디렉터리 설정
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Clean task 정의
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
