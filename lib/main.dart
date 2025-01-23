@@ -4,6 +4,7 @@ import 'package:tiktok_clone/screens/features/inbox/activity_screen.dart';
 import 'package:tiktok_clone/screens/features/inbox/chat_detail_screen.dart';
 import 'package:tiktok_clone/screens/features/inbox/chats_screen.dart';
 import 'package:tiktok_clone/screens/features/main_navigation/main_navigation_screen.dart';
+import 'package:tiktok_clone/screens/features/users/user_profile_screen.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -35,7 +36,7 @@ class TikTokApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      home: ChatDetailScreen(),
+      home: UserProfileScreen(),
     );
   }
 }
