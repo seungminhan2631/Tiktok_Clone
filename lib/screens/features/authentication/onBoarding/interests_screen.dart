@@ -144,30 +144,26 @@ class _InterestsScreenState extends State<InterestsScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
-        elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.only(),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(),
+        child: SizedBox(
           child: SizedBox(
-            child: SizedBox(
-              width: double.infinity,
-              child: GestureDetector(
-                onTap: _onNextTap,
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: Sizes.size16,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  child: Text(
-                    'Next',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: Sizes.size16,
-                    ),
+            width: double.infinity,
+            child: GestureDetector(
+              onTap: _onNextTap,
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: Sizes.size16,
+                ),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                ),
+                child: Text(
+                  'Next',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: Sizes.size16,
                   ),
                 ),
               ),

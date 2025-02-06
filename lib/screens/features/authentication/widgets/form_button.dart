@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class FormButton extends StatelessWidget {
   const FormButton({
@@ -27,7 +28,11 @@ class FormButton extends StatelessWidget {
           duration: Duration(milliseconds: 100),
           style: TextStyle(
             fontWeight: FontWeight.w600,
-            color: disabled ? Colors.grey.shade400 : Colors.white,
+            color: disabled
+                ? isDarkMode(context)
+                    ? Colors.grey.shade800
+                    : Colors.grey.shade300
+                : Colors.white,
           ),
           child: Text(
             'Next',
