@@ -34,9 +34,13 @@ analyzer:
     deprecated_member_use: ignore
     empty_constructor_bodies: ignore
     file_names: ignore
+    override_on_non_overriding_member: ignore
     prefer_final_fields: ignore
+    prefer_typing_uninitialized_variables: ignore
+    sized_box_for_whitespace: ignore
     sort_child_properties_last: ignore
     unnecessary_string_interpolations: ignore
     unused_element: ignore
     unused_field: ignore
     unused_local_variable: ignore
+    use_build_context_synchronously: ignore

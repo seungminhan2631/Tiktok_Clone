@@ -45,5 +45,6 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<string>Plz let me see your photos</string>
 </dict>
 </plist>

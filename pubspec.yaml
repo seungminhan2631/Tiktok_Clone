@@ -27,9 +27,13 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
+
+
 dependencies:
   flutter:
     sdk: flutter
+
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -37,6 +41,15 @@ dependencies:
   font_awesome_flutter: ^10.8.0
   video_player: ^2.9.2
   visibility_detector: ^0.4.0+2
+  google_fonts: ^6.2.1
+  flex_color_scheme: ^8.1.0
+  go_router: ^14.7.2
+  camera: ^0.11.1
+  permission_handler: ^11.3.1
+  image_gallery_saver: ^2.0.3
+  gallery_saver_plus: ^3.2.1
+  image_picker: ^1.1.2
+  camerawesome: ^2.1.0
 
 
 
@@ -57,6 +70,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

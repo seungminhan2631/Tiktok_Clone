@@ -4,8 +4,19 @@ import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/screens/features/authentication/password_screen.dart';
 import 'package:tiktok_clone/screens/features/authentication/widgets/form_button.dart';
 
+class EmailScreenArgs {
+  final String username;
+
+  EmailScreenArgs({required this.username});
+}
+
 class EmailScreen extends StatefulWidget {
-  const EmailScreen({super.key});
+  final String username;
+
+  const EmailScreen({
+    super.key,
+    required this.username,
+  });
 
   @override
   State<EmailScreen> createState() => _UsernameScreenState();
@@ -58,6 +69,7 @@ class _UsernameScreenState extends State<EmailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as EmailScreenArgs;
     return GestureDetector(
       onTap: _onScaffoldTap,
       child: Scaffold(
@@ -76,7 +88,7 @@ class _UsernameScreenState extends State<EmailScreen> {
             children: [
               Gaps.v40,
               Text(
-                'What is your email?',
+                'What is your email, ${args.username}?',
                 style: TextStyle(
                   fontSize: Sizes.size20,
                   fontWeight: FontWeight.w600,

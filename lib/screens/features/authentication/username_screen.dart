@@ -34,9 +34,10 @@ class _UsernameScreenState extends State<UsernameScreen> {
 
   void _onNextTap() {
     if (_username.isEmpty) return;
-    Navigator.of(context).push(
+    Navigator.push(
+      context,
       MaterialPageRoute(
-        builder: (context) => EmailScreen(),
+        builder: (context) => EmailScreen(username: _username),
       ),
     );
   }
